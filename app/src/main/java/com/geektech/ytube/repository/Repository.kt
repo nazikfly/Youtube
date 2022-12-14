@@ -3,7 +3,7 @@ package com.geektech.ytube.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import com.geektech.ytube.BuildConfig
+import androidx.viewbinding.BuildConfig
 import com.geektech.ytube.core.network.RetrofitClient
 import com.geektech.ytube.data.remote.model.PlayList
 import kotlinx.coroutines.Dispatchers
