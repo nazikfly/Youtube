@@ -12,12 +12,16 @@ import com.geektech.ytube.core.utils.CheckInternetConnection
 import com.geektech.ytube.core.utils.Constant
 import com.geektech.ytube.data.remote.model.Item
 import com.geektech.ytube.databinding.ActivityPlaylistsBinding
+import com.geektech.ytube.repository.Repository
 import com.geektech.ytube.ui.detail.DetailPlaylistActivity
+import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PlaylistActivity : BaseActivity<ActivityPlaylistsBinding>(){
 
-   private lateinit var viewModel: PlaylistViewModel
-       private  var adapter:PlaylistsAdapter? = null
+   private val viewModel: PlaylistViewModel by viewModel()
+
+   private  var adapter:PlaylistsAdapter? = null
 
     override fun inflateViewBinding(layoutInflater: LayoutInflater): ActivityPlaylistsBinding {
         return ActivityPlaylistsBinding.inflate(layoutInflater)
@@ -34,10 +38,9 @@ adapter?.onClick = {
 
      fun initListener(id: Item) {
 
-
     }
     override fun setUI() {
-        viewModel=ViewModelProvider(this)[PlaylistViewModel::class.java]
+
     }
 
     override fun setupLiveData() {

@@ -68,6 +68,14 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     //noinspection GradleDependency
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    //coil
     implementation("io.coil-kt:coil:2.2.2")
+
+    //koin
+    def koin_version = "2.2.2"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-androidx-scope:$koin_version"
+    implementation "io.insert-koin:koin-androidx-viewmodel:$koin_version"
+    implementation "io.insert-koin:koin-androidx-fragment:$koin_version"
 
 }
